@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "SHATTER",
+  "version": "3.3",
+  "description": "Secure Hashing Algorithm To Terminate Explicit/Exploitative Requests (Block bad queries and domain names based on their SHA3-512 checksums)",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+    "unlimitedStorage",
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "https://*/"
+  ],
+  "web_accessible_resources": [
+    "warning.html"
+  ],
+  "background": {
+    "scripts": [
+      "sha3.js",
+      "background.js",
+      "blocklistsUpdater.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "32": "icon32.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{38552950-9caa-41f6-b9a4-5dfa5ca59902}"
+    }
+  }
+}

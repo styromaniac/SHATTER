@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <title>SHATTER</title>
+    <link rel="icon" href="icon.svg?v=1" type="image/svg+xml">
+    <link rel="icon" href="icon128.png?v=1" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url(icon.svg?v=1) no-repeat, #000;
+        background-size: 100vw;
+        background-position: 50% 0%;
+        margin: 0;
+        text-shadow: 4px #000;
+        padding: 15px
+    }
+    
+    h1 {
+        font-family: "Metalcrime-q5Kl", sans-serif;
+        margin: 0;
+        font-size: 14vw;
+        text-align: center;
+        text-shadow: 0 .05vw 0#ccc, 0 .1vw 0#c9c9c9, 0 .15vw 0#bbb, 0 .2vw 0#b9b9b9, 0 .25vw 0#aaa, 0 .3vw 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15)
+    }
+    
+    .warning h3,
+    body,
+    h1,
+    p {
+        color: #fff
+    }
+    
+    #storage-size {
+        text-align: left;
+        height:20px;
+        margin-top: 10px;
+        text-shadow: 0px 0px 20px rgba(0,0,0,1);
+    }
+
+    a {
+        color: #48f;
+        text-decoration: none
+    }
+    
+    .container,
+    button,
+    input[type=text] {
+        border-radius: 4px;
+        box-shadow: 0 0 10px #fff
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, .8)
+    }
+    
+    .categoryContainer {
+        flex-basis: 50%;
+        padding: 10px;
+        box-sizing: border-box
+    }
+    
+    @font-face {
+        font-family: "Metalcrime-q5Kl";
+        src: url(Metalcrime-q5Kl.ttf)format("truetype");
+        font-weight: 1000;
+        font-style: normal
+    }
+    
+    .warning {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, .8);
+        box-shadow: 0 0 10px red;
+        color: #333
+    }
+    
+    button:active {
+        box-shadow: 0 0 10px #48f;
+        color: #48f;
+        transition: all .008333333s linear
+    }
+    
+    button,
+    input[type=text] {
+        background: 0 0;
+        color: #fff;
+        border: 1px solid transparent
+    }
+    
+    .warning,
+    input[type=text] {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin: 10px 0;
+        box-sizing: border-box
+    }
+    
+    input[type=text]:focus {
+        box-shadow: 0 0 10px #48f;
+        outline: 0
+    }
+    
+    input::placeholder {
+        opacity: 1
+    }
+    
+    button {
+        padding: 0
+    }
+    
+    ul {
+        line-height: 2;
+        margin-left: 15px;
+        padding-left: 0
+    }
+    
+    .removeButton {
+        margin-left: 5px
+    }
+    </style>
+    <base target="_blank"> </head>
+
+<body>
+    <h1>SHATTER</h1>
+    <div class="warning">
+        <h3>Important Security Notice:</h3>
+        <p>Please ensure that you only link to checksum files from trusted and secure sources. We strongly recommend using end-to-end encrypted protocols or networks, utilizing networks that sign files, or verifying the files using a trusted method. SHATTER will not block unanticipated search queries, such as misspellings, typos, adding unexpected characters or use of an unsupported search engine.</p>
+        <p>Failure to adhere to these guidelines could lead to exposure to malicious content or other security risks just like not having any protection with SHATTER to begin with. You wouldn't want the potential of loading empty or misleading blocklists from bad actors. Also, you should always browse with care. Using SHATTER is not an excuse to browse any web recklessly. You have been warned!</p>
+        <p>Supported search engines:
+            <br> <a href="http://www.google.com">www.google.com</a>, <a href="http://www.bing.com">www.bing.com</a>, <a href="http://duckduckgo.com">duckduckgo.com</a>, <a href="http://you.com">you.com</a>, <a href="http://search.aol.com">search.aol.com</a>, <a href="http://www.ask.com">www.ask.com</a>, <a href="http://www.ecosia.org">www.ecosia.org</a>, <a href="http://www.mojeek.com">www.mojeek.com</a>, <a href="http://www.webcrawler.com">www.webcrawler.com</a>, <a href="http://www.info.com">www.info.com</a>, <a href="http://www.zapmeta.com">www.zapmeta.com</a>, <a href="http://www.hotbot.com">www.hotbot.com</a>, <a href="http://www.teoma.com">www.teoma.com</a>, <a href="http://www.dogpile.com">www.dogpile.com</a>, <a href="http://www.contenko.com">www.contenko.com</a>, <a href="http://yandex.com">yandex.com</a>, <a href="http://www.baidu.com">www.baidu.com</a>, <a href="http://www.sogou.com">www.sogou.com</a>, <a href="http://swisscows.com">swisscows.com</a>, and <a href="http://metager.org">metager.org</a> </p>
+    </div>
+    <div class="container">
+        <div class="categoryContainer">
+            <h3>Link to a query checksums file:</h3>
+            <input type="text" id="queryChecksumFileURL" placeholder="Enter URL here...">
+            <button id="linkQueryChecksumFile">Link File</button>
+            <div id="linkedQueryFiles">
+                <h4>Linked Query Checksums Files:</h4>
+                <ul id="queryFileList"></ul>
+            </div>
+        </div>
+        <div class="categoryContainer">
+            <h3>Link to a domain checksums file:</h3>
+            <input type="text" id="urlChecksumFileURL" placeholder="Enter URL here...">
+            <button id="linkURLChecksumFile">Link File</button>
+            <div id="linkedURLFiles">
+                <h4>Linked Domain Checksums Files:</h4>
+                <ul id="urlFileList"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="storage-size">Storage used: ...</div>
+    <script src="options.js"></script>
+    <script src="storageUsed.js"></script>
+</body>
+
+</html>
